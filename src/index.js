@@ -19,7 +19,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: process.env.NODE_ENV === 'production' 
-      ? 'https://your-production-url.com' 
+      ? 'https://cricket-chat-room-client.vercel.app' 
       : 'http://localhost:8080',
     methods: ['GET', 'POST'],
     credentials: true,
@@ -31,7 +31,7 @@ setupSocket(io);
 app.use(express.json());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? 'https://your-production-url.com' 
+    ? 'https://cricket-chat-room-client.vercel.app' 
     : 'http://localhost:8080',
   credentials: true,
 }));
